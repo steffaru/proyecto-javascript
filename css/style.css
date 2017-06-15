@@ -1,6 +1,71 @@
 body{
-	display: block;
-	width: 100%;
+    background: aliceblue;
 	margin: auto;
 	padding: 0;
+	text-align: center;
+}
+#map{
+    position: relative;
+    overflow: visible;
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+#data-head, #data-education, #data-experiencia, #data-project, #data-mapa{
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-weight: lighter;
+    color: darkslategray;
+}
+
+
+h1{
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    color: green;
+}
+h1::before{
+    content: "";
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    border-bottom: 2px solid green;
+    border-left:2px solid green;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    transition: all 0.25s;
+}
+
+h1:hover::before{
+    height: 100%;
+}
+h2{
+    position: relative;
+    transition: all 2s;
+    display: inline-block;
+}
+h2:hover{
+    color: gray;
+}
+h2::before{
+    content: "";
+    background: darkgreen;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    transform: translateY(4px);
+    opacity: 0;
+}
+h2:hover::before{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.imgPerfil{
+    width: 100px;
+    margin: 20px;
 }
