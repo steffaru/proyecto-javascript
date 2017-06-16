@@ -1,9 +1,5 @@
-var imagen = document.getElementById("myImage").setAttribute("src", "img/foto-cv-tiny.jpg");
-
-
 var bio = {
 	nombreApellido:"Estefania Aranguren",
-	imgCv:imagen,
 	fechaNac:"Abril - 1988",
 	estCivil:"Soltera",
 	habilities:["github","html5","Js","jquery","bootstrap","css","sass","photoshop","illustrator"],
@@ -11,7 +7,8 @@ var bio = {
 	github:"https://github.com/steffaru",
 
 	mostrar:function(){
-		$("#data-head").append(this.imgCv + "<br>" + this.fechaNac + "<br>" + this.estCivil + "<br>" + this.habilities + "<br>" + this.github);
+		$("#myImage").attr("src","img/foto-cv-tiny.jpg");
+		$("#data-head").append("<br>" + this.fechaNac + "<br>" + this.estCivil + "<br>" + this.habilities + "<br>" + this.github);
 		console.log(bio);
 	}
 
